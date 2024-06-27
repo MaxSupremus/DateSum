@@ -18,13 +18,13 @@ def calculate_popular_sum(start_date, end_date):
         
         current_date += timedelta(days=1)
     
-    most_common_sum = sums_counter.most_common()
+    most_common_sum = sums_counter.most_common(1)[0]
     return most_common_sum
 
 start_date = datetime(1000, 1, 1)
 end_date = datetime.today()
 
-most_common_sum, count = calculate_popular_sum(start_date, end_date)
+most_common_sum= calculate_popular_sum(start_date, end_date)
 
-print("The most popular sum is {most_common_sum} which appears {count} times.")
+print("The most popular sum is {most_common_sum}")
 
